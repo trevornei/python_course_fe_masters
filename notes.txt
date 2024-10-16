@@ -38,4 +38,69 @@ type(int(5))
 type(int)
 >>> <class 'type'>
 
+__specialmethods__
+--> Learned about: constructor method and string representation.
 
+Next up... Tomorrow I will learn about inheritance.
+Inheritance allows a subclass to inherit:
+- Properties
+||
+- methods 
+|
+ \
+  \
+    – > from the parent class.
+
+    Parent class = super class
+    Child Class = subclass
+   # Parent class
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def start(self):
+        print(f"{self.make} {self.model} is starting.")
+
+# Child class inheriting from Vehicle
+class Car(Vehicle):
+    def __init__(self, make, model, year, doors):
+        # Call the parent class's constructor using 'super()'
+        super().__init__(make, model, year)
+        self.doors = doors
+
+    # New method specific to the Car class
+    def lock_doors(self):
+        print(f"Locking {self.doors} doors.")
+
+# Child class inheriting from Vehicle
+class Motorcycle(Vehicle):
+    def __init__(self, make, model, year, helmet):
+        super().__init__(make, model, year)
+        self.helmet = helmet
+
+    # Override the start method for Motorcycle
+    def start(self):
+        print(f"{self.make} {self.model} motorcycle is roaring to life.")
+
+# Creating instances of Car and Motorcycle
+car = Car("Toyota", "Camry", 2020, 4)
+motorcycle = Motorcycle("Harley-Davidson", "Sportster", 2019, True)
+
+# Using inherited and new methods
+car.start()  # Inherited from Vehicle
+car.lock_doors()  # New method in Car
+
+motorcycle.start()  # Overridden method in Motorcycle
+
+Output: 
+Toyota Camry is starting.
+Locking 4 doors.
+Harley-Davidson Sportster motorcycle is roaring to life.
+
+
+Both the car and motorcylce are subclasses of the vehicle parent class.
+super() allows the subclass to get properties from the super class.
+
+Both the car and motorcycle instances have their own unique methods. 
