@@ -1,2 +1,7 @@
 Lists have order 
 Set are unordered.
+
+List Comprehensions:
+Start with what you are iterating over. [for name in names  ]
+1. Then you can add a condition to the far left. [for name in names if name.startswith("A")]
+2. Then you can add a transformation. [for name in names if name.startswith("A") print(name)]
