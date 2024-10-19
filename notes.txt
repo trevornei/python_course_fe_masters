@@ -108,3 +108,9 @@ Both the car and motorcycle instances have their own unique methods.
 PyPi is python package index.
 
 One thing that I love about the python standard library - is that they embrace, "Batteries Include".
+
+assert keyword checks true | false.
+    assert is not for validation.
+    better for raising acception.
+    not to be used for production testing.
+
