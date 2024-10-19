@@ -103,4 +103,8 @@ Harley-Davidson Sportster motorcycle is roaring to life.
 Both the car and motorcylce are subclasses of the vehicle parent class.
 super() allows the subclass to get properties from the super class.
 
-Both the car and motorcycle instances have their own unique methods. 
+Both the car and motorcycle instances have their own unique methods.
+
+PyPi is python package index.
+
+One thing that I love about the python standard library - is that they embrace, "Batteries Include".
